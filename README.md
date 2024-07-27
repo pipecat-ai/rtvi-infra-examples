@@ -10,12 +10,16 @@ They are intended as examples, containing everything you need to work with the R
 
 The example bot included in this project does not require any GPU-enabled platform to run, instead opting for AI services that are available via services. You can, of course, configure your pipeline to use on-premises models if you prefer.
 
+
 ## Quickstart
+
+**Please note: the Daily SDK required is not currently supported on Windows. The required dependencies will currently fail to install.**
 
 #### Install the development dependencies:
 
 ```bash
 python -m venv venv
+source venv/bin/activate # or OS equivalent
 pip install -r dev-requirements.txt
 ```
 
