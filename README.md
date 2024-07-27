@@ -13,7 +13,7 @@ The example bot included in this project does not require any GPU-enabled platfo
 
 ## Quickstart
 
-**Please note: the Daily SDK required is not currently supported on Windows. The required dependencies will currently fail to install.**
+**Please note: the Daily SDK (`daily-python`) required by the bot files is not currently supported on Windows. The required dependencies will currently fail to install. Please use an alternative OS (Windows support is on Daily's roadmap for future development.)**
 
 #### Install the development dependencies:
 
