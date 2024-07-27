@@ -1,6 +1,8 @@
 # RTVI Local Infrastructure Example
 
-This is a useful example for testing your clients as it contains everything you need to work with the RTVI client in local development. It can also be used as a starting point for building your own realtime AI voice and video workflows on your deployment target of choice.
+Example for testing your clients in development, containing everything you need to connect a bot to your RTVI client. It can also be used as a starting point for building your own realtime AI voice and video workflows on your deployment target of choice.
+
+For low traffic use-cases, where running as processes is adequete, this example is cloud-deploy ready and Dockerfiles are included.
 
 This project includes two Python files:
 
@@ -69,9 +71,23 @@ curl --location --request POST 'http://localhost:7860' \
 Note: the first time you run this method, it may take a few minutes to download the necessary dependencies.
 
 
-## Overview
+#### Configure your RTVI client
 
-This repo lays out an example local runner and bot file that can be used in local development with an RTVI client. It doesn't make any hosting platform assumptions and simply launches the bot as a subprocess of the runner. 
+You can pass the URL of your bot runner to your RTVI client like so:
+
+```typescript
+import { VoiceClient } from "realtime-ai";
+
+const voiceClient = new VoiceClient({
+  baseUrl: import.meta.env.VITE_BASE_URL,
+  enableMic: true,
+  config: {...},
+});
+```
+
+## Deployment
+
+This repo doesn't make any hosting platform assumptions and simply launches the bot as a subprocess of a single machine / VM. Great for smaller use-cases where you do not need to run more than 5-10 concurrent bots.
 
 You can read more about the deployment pattern adopted in this example [here](https://docs.pipecat.ai/deployment/pattern).
 
