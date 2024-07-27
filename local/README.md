@@ -1,19 +1,20 @@
-# RTVI - Example bot and runner
+# RTVI Local Infrastructure Example
 
-This project includes two applications:
+This is a useful example for testing your clients as it contains everything you need to work with the RTVI client in local development. It can also be used as a starting point for building your own realtime AI voice and video workflows on your deployment target of choice.
 
-🏃‍♀️ `runner` HTTP service for starting new realtime sessions by spawning new bot agents at the specified transport URL.
+This project includes two Python files:
 
-🤖 `bot` The chatbot agent, leveraging Pipecat and the library's RTVI framework implementation.
+🏃‍♀️ `runner.py` HTTP service for starting new realtime sessions by spawning new bot agents at the specified transport URL.
 
-They are intended as examples, containing everything you need to work with the RTVI client in local development. It can be used as a template for building your own realtime AI voice and video workflows.
+🤖 `bot.py` The chatbot agent, leveraging Pipecat and the library's RTVI framework implementation.
+
 
 The example bot included in this project does not require any GPU-enabled platform to run, instead opting for AI services that are available via services. You can, of course, configure your pipeline to use on-premises models if you prefer.
 
+**Note: The term 'local' in this project name refers to the ability to spawn agents as Python processes on your local computer instead of containerizing and deploying them to the cloud. However, please note that the bot services still require an active internet connection to function.**
+
 
 ## Quickstart
-
-**Please note: the Daily SDK (`daily-python`) required by the bot files is not currently supported on Windows. The required dependencies will currently fail to install unless you use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).**
 
 #### Install the development dependencies:
 
@@ -23,14 +24,16 @@ source venv/bin/activate # or OS equivalent
 pip install -r dev-requirements.txt
 ```
 
-Create environment files for both apps:
+**Please note: the Daily SDK (`daily-python`) required by the bot files is not currently supported on Windows. The required dependencies will currently fail to install unless you use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).**
+
+#### Create environment files for both apps:
 
 ```bash
 cp runner/env.example runner/.env
 cp bot/env.example bot/.env
 ```
 
-Enter the required API keys for both applications.
+Enter the necessary (required) API keys for both applications.
 
 
 #### Start the bot runner server:
