@@ -115,7 +115,9 @@ The example bot file included in this project uses the [Pipecat](https://www.pip
 
 #### Project `.env`
 
-Your bot file requires the necessary service API keys to run inference based on the configuration of your RTVI pipeline or request services. Out of the box, we implement both Cartesia and Groq.
+Your bot file requires the necessary service API keys to run inference based on the configuration of your RTVI pipeline or request services. Out of the box, we implement both Cartesia and [Groq](https://groq.com/).
+
+You can change which LLM service your bot uses by passing an optional `llm_base_url` to the RTVIProcessor constructor method.
 
 You do not need to pass your Daily API key to this app as an access is sent from the bot runner, allowing it to connect to the room. If working with the defaults, your .env file should look like this:
 
