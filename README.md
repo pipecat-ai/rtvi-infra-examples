@@ -6,7 +6,7 @@ This repository contains example applications for launching and deploying real-t
 import { VoiceClient } from "realtime-ai";
 
 const voiceClient = new VoiceClient({
-    baseUrl: import.meta.env.VITE_BASE_URL,
+    baseUrl: "http://localhost:7860", // as an example
     enableMic: true,
     config: {...},
 });
