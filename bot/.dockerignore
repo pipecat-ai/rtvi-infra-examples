@@ -1,0 +1,8 @@
+Dockerfile
+env.example
+.env
+.git
+__pycache__
+*.pyc
+*.pyo
+*.pyd
