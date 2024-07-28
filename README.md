@@ -18,7 +18,9 @@ Most of the examples use the [Pipecat](www.pipecat.ai) RTVI framework implementa
 
 ## Available examples:
 
-- [local](/local) - A useful setup when building or testing clients in local development. This example spawns [Pipecat](https://www.pipecat.ai) bots that connect to your RTVI clients as local Python processes. It also serves as a good starting template for other deployment targets not included in this repository.
+- [local](/01-local) - A useful setup when building or testing clients in local development. This example spawns [Pipecat](https://www.pipecat.ai) bots that connect to your RTVI clients as local Python processes. It also serves as a good starting template for other deployment targets not included in this repository.
+
+- [Modal](/02-modal) - Deploy bots to [modal.com](https://www.modal.com). This example is currently WIP.
 
 
 ---

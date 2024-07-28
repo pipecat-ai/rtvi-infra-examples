@@ -11,9 +11,9 @@ This project includes two Python files:
 🤖 `bot.py` The chatbot agent, leveraging Pipecat and the library's RTVI framework implementation.
 
 
-The example bot included in this project does not require any GPU-enabled platform to run, instead opting for AI services that are available via services. You can, of course, configure your pipeline to use on-premises models if you prefer.
+The example bot included in this project does not require any GPU-enabled platform to run, instead opting for AI services that are available via http / websockets (no local models.) You can, of course, configure your pipeline to use on-premises models if you prefer.
 
-**Note: The term 'local' in this project name refers to the ability to spawn agents as Python processes on your local computer instead of containerizing and deploying them to the cloud. However, please note that the bot services still require an active internet connection to function.**
+**Note: The term 'local' in this project name refers to the ability to spawn agents as Python processes on your local computer instead of containerizing and deploying them to the cloud. Please note, however, that the bot services still require an active internet connection to function.**
 
 
 ## Quickstart
@@ -79,7 +79,7 @@ You can pass the URL of your bot runner to your RTVI client like so:
 import { VoiceClient } from "realtime-ai";
 
 const voiceClient = new VoiceClient({
-  baseUrl: import.meta.env.VITE_BASE_URL,
+  baseUrl: "http://localhost:7860", // as an example
   enableMic: true,
   config: {...},
 });
