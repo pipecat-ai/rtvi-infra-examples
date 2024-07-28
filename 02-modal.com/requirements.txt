@@ -1,0 +1,6 @@
+modal==0.63.90
+pipecat-ai[daily,openai,cartesia,silero]
+websockets
+requests
+loguru
+python-dotenv
