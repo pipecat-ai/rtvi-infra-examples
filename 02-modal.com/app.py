@@ -1,6 +1,6 @@
 import os
 from modal import Secret, App, Image, web_endpoint
-from fastapi import Depends, HTTPException
+from fastapi import HTTPException
 from typing import Dict
 
 MAX_SESSION_TIME = 5 * 60  # 5 minutes
