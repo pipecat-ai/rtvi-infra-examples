@@ -33,7 +33,7 @@ app = App("pipecat-example")
               keep_warm=0,  # Do not reuse instances as the pipeline needs to be restarted
               timeout=MAX_SESSION_TIME,
               container_idle_timeout=2,
-              max_inputs=1,
+              max_inputs=1,  # Do not reuse instances as the pipeline needs to be restarted
               retries=0)
 async def run_bot(room_url: str, token: str, config: Dict):
     # Bot function (Pipecat + RTVI)

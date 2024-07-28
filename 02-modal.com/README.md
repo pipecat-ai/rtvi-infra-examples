@@ -1,7 +1,5 @@
 # RTVI Modal.com Example
 
-**This example is currently WIP**
-
 [Modal](htts://www.modal.com) provides a great way to quickly both CPU and GPU-enabled bots, ideal if your want to use your own on-premises models.
 
 Modal provides several ways to go about this; using their Python SDK with decorators, or invovking functions directly. You can also push Docker images directly and launch machines via their API.
