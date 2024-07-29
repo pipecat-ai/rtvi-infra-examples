@@ -1,7 +1,0 @@
-pipecat-ai[daily,openai,cartesia,silero]==0.0.39
-requests
-python-dotenv
-loguru
-fastapi
-uvicorn
-websockets

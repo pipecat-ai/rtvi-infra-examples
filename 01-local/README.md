@@ -23,7 +23,8 @@ The example bot included in this project does not require any GPU-enabled platfo
 ```bash
 python -m venv venv
 source venv/bin/activate # or OS equivalent
-pip install -r dev-requirements.txt
+pip install -r bot/requirements.txt
+pip install -r runner/requirements.txt
 ```
 
 **Please note: the Daily SDK (`daily-python`) required by the bot files is not currently supported on Windows. The required dependencies will currently fail to install unless you use [WSL](https://learn.microsoft.com/en-us/windows/wsl/install).**
