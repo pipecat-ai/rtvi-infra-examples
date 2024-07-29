@@ -21,7 +21,6 @@ load_dotenv(override=True)
 MAX_SESSION_TIME = 15 * 60  # 15 minutes
 
 DAILY_API_URL = os.getenv("DAILY_API_URL", "https://api.daily.co/v1")
-DAILY_DOMAIN = os.getenv("DAILY_DOMAIN", "https://rtvi.daily.co")
 DAILY_API_KEY = os.getenv("DAILY_API_KEY", "")
 
 app = FastAPI()
@@ -102,8 +101,7 @@ async def index(request: Request) -> JSONResponse:
     if debug_room:
         # Check debug room URL exists, and grab it's properties
         try:
-            room: DailyRoomObject = daily_rest_helper.get_room_from_url(
-                f"{DAILY_DOMAIN}/{debug_room}")
+            room: DailyRoomObject = daily_rest_helper.get_room_from_url(debug_room)
         except Exception:
             raise HTTPException(
                 status_code=500, detail=f"Room not found: {debug_room}")
@@ -153,7 +151,7 @@ async def index(request: Request) -> JSONResponse:
 
 if __name__ == "__main__":
     # Check environment variables
-    required_env_vars = ['DAILY_API_KEY', 'DAILY_DOMAIN']
+    required_env_vars = ['DAILY_API_KEY']
     for env_var in required_env_vars:
         if env_var not in os.environ:
             raise Exception(f"Missing environment variable: {env_var}.")

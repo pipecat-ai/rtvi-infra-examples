@@ -111,15 +111,11 @@ _Note: this is for illustrative purposes as a rudimentary example of securing yo
 
 `USE_DEBUG_ROOM`
 
-By default, a runner will create a new room for the realtime session with each request. In local development, you may prefer to work with the same room each time (to avoid exceeding transport service room limits, etc.). Pass the name of the room here, e.g., `USE_DEBUG_ROOM=test`. In the case of Daily, this should be just the room name, not the full URL.
+By default, a runner will create a new room for the realtime session with each request. In local development, you may prefer to work with the same room each time (to avoid exceeding transport service room limits, etc.). Pass the name / url of the room here, in the case of Daily this would look like `USE_DEBUG_ROOM=https://yourdomain.daily.co`.
 
 `DAILY_API_KEY`
 
 This example is configured to use [Daily](https://www.daily.co) as the default realtime media transport. You can obtain your developer key for your domain by visiting your [Daily dashboard](https://dashboard.daily.co).
-
-`DAILY_DOMAIN`
-
-Your Daily account domain, e.g., `https://rtvi.daily.co` where `rtvi` is the name of the domain you chose when creating your account. This can also be found on your Daily dashboard.
 
 
 ## Bot file
