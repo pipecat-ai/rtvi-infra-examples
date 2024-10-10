@@ -1,3 +1,4 @@
+> Temporarily archived while examples are updated.
 # RTVI Backend / Infrastructure Examples
 
 This repository contains example applications for launching and deploying real-time bots that you can connect to with your RTVI-enabled clients. All of them will provide you with a base URL that you can pass to the Voice Client constructor, like so ...
